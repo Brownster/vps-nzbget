@@ -4,13 +4,13 @@ MAINTAINER marc brown <marc@22walker.co.uk> v0.0.1
 EXPOSE 6789 6791
 
 # map /config to host defined config path (used to store configuration from app)
-VOLUME /config
+VOLUME /home/config
 
 # map /data to host defined data path (used to store downloads or use blackhole)
-VOLUME /data
+VOLUME /home/data
 
 # map /media to host defined media path (used to read/write to media library)
-VOLUME /media
+VOLUME /home/media
 
 # add supervisor conf file for app
 ADD nzbget.conf /etc/supervisor/conf.d/nzbget.conf
